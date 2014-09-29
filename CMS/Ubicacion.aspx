@@ -52,12 +52,5 @@
 <asp:Content ID="Content5" ContentPlaceHolderID="cpHighlights" runat="server">
 </asp:Content>
 <asp:Content ID="Content6" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div>
-        <h2>Ejemplo de Google Maps</h2>
-    </div>
-    <div id="map" style="width: 304px; top: 81px; left: 220px; position: relative; height: 238px">
-    </div>
-    <br />
-    <br />
 
 </asp:Content>

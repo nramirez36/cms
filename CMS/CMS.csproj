@@ -105,7 +105,6 @@
     <Content Include="Novedades.aspx" />
     <Content Include="ObraSocial.aspx" />
     <Content Include="Pacientes.aspx" />
-    <Content Include="PopupMap.aspx" />
     <Content Include="Prestaciones.aspx" />
     <Content Include="QuienesSomos.aspx" />
     <Content Include="Ubicacion.aspx" />
@@ -182,13 +181,6 @@
     </Compile>
     <Compile Include="Pacientes.aspx.designer.cs">
       <DependentUpon>Pacientes.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PopupMap.aspx.cs">
-      <DependentUpon>PopupMap.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PopupMap.aspx.designer.cs">
-      <DependentUpon>PopupMap.aspx</DependentUpon>
     </Compile>
     <Compile Include="Prestaciones.aspx.cs">
       <DependentUpon>Prestaciones.aspx</DependentUpon>

@@ -6,13 +6,13 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>TOTAL SALUD - Donde Estamos</title>
-    <script src="js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
+<%--    <script src="js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>--%>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script type="text/javascript">
         function InitializeMap() {
-            var latlng = new google.maps.LatLng(-31.482760, -64.248751);
+            var latlng = new google.maps.LatLng(-31.3505777, -64.176546);
             var myOptions = {
-                zoom: 10,
+                zoom: 15,
                 center: latlng,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             };
@@ -20,10 +20,10 @@
             var marker = new google.maps.Marker({
                 position: latlng,
                 map: map,
-                title: 'Hola'
+                title: 'TOTAL SALUD'
             });
             marker.info = new google.maps.InfoWindow({
-                content: 'Datos'
+                content: 'Dirección: <br/>Sesarego esq. Anchorena <br/>B° Jorge Newberry'
             });
             google.maps.event.addListener(marker, "mouseover", function () { marker.info.open(map, marker); });
             marker.info.open(map, marker);
