@@ -1,0 +1,152 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CMS.master.cs" Inherits="CMS.CMS" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>MediSys</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.dropotron.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-layers.min.js"></script>
+    <script src="js/init.js"></script>
+
+    <noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-wide.css" />
+		</noscript>
+    <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+
+    <asp:ContentPlaceHolder ID="cpHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <!-- Header -->
+            <div id="header">
+                <!-- Logo -->
+                <asp:ContentPlaceHolder ID="cpTituloPagina" runat="server"></asp:ContentPlaceHolder>
+                <%--<h1><a href="index.aspx" id="logo">Arcana <em>by HTML5 UP</em></a></h1>--%>
+                <!-- Nav -->
+                <nav id="nav">
+                    <asp:ContentPlaceHolder ID="cpNav" runat="server"></asp:ContentPlaceHolder>
+                </nav>
+            </div>
+            <!-- Banner -->
+            <asp:ContentPlaceHolder ID="cpSlider" runat="server">
+            </asp:ContentPlaceHolder>
+            <!-- Highlights -->
+            <asp:ContentPlaceHolder ID="cpHighlights" runat="server"></asp:ContentPlaceHolder>
+            <!-- Gigantic Heading -->
+            <asp:ContentPlaceHolder ID="cpGiganticHeading" runat="server"></asp:ContentPlaceHolder>
+            <%--<section class="wrapper style2">
+                <div class="container">
+                    <header class="major">
+                        <h2>A gigantic heading you can use for whatever</h2>
+                        <p>Aca se podria poner una frase o lema de la institucion</p>
+                    </header>
+                </div>
+            </section>--%>
+            <!-- Posts -->
+            <asp:ContentPlaceHolder ID="cpNovedades" runat="server"></asp:ContentPlaceHolder>
+
+
+            <%--<!-- CTA -->
+            <section id="cta" class="wrapper style3">
+                <div class="container">
+                    <header>
+                        <h2>Are you ready to continue your quest?</h2>
+                        <a href="#" class="button">Insert Coin</a>
+                    </header>
+                </div>
+            </section>--%>
+            <!-- Footer -->
+            <div id="footer">
+                <div class="container">
+                    <div class="row ">
+                        <div class="6u">
+                            <div class="row collapse-at-2">
+                                <section class="6u">
+                                    <h3>Contacto</h3>
+                                    <ul class="links">
+                                        <li><u>Telefonos:</u></li>
+                                        <li><b>(0351) 492-2772</b> - <b>(0351) 492-3602</b></li>
+                                        <li><u>Email:</u></li>
+                                        <li><b>test@Email.com</b></li>
+                                        <li><u>Pagina Web:</u></li>
+                                        <li><b>www.adsad.com</b></li>
+                                    </ul>
+                                </section>
+                                <section class="6u">
+                                    <h3>Sedes</h3>
+                                    <ul class="links">
+                                        <li><u>Dirección</u></li>
+                                        <li><b>Sesarego esq. Anchorena B° Jorge Newberry</b></li>
+                                        <li><u>Mapa:</u></li>
+                                        <li><a href="#" class='example8'>
+                                            <img alt="" src="images/Google-Maps-icon.png" style="width: 40px; height: 40px" />
+                                        </a>
+                                        </li>
+                                    </ul>
+                                </section>
+                            </div>
+                        </div>
+                        <section class="6u">
+                            <h3>Consultas:</h3>
+                            <form>
+                                <div class="row half collapse-at-2">
+                                    <div class="6u">
+                                        <input type="text" name="name" id="name" placeholder="Nombre" />
+                                    </div>
+                                    <div class="6u">
+                                        <input type="email" name="email" id="email" placeholder="Email" />
+                                    </div>
+                                </div>
+                                <div class="row half">
+                                    <div class="12u">
+                                        <textarea name="message" id="message" placeholder="Mensaje" rows="3"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row half">
+                                    <div class="12u">
+                                        <ul class="actions">
+                                            <li>
+                                                <input type="submit" class="button alt" value="Enviar Mensaje" /></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </form>
+                        </section>
+                    </div>
+                </div>
+
+                <!-- Icons -->
+                <ul class="icons">
+                    <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                    <%--<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>--%>
+                    <li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                    <li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+                </ul>
+
+                <!-- Copyright -->
+                <div class="copyright">
+                    <ul class="menu">
+                        <li>&copy; TOTAL SALUD. Todos los derechos reservados.</li>
+                        <li>Diseño y Desarrollo: <a href="http://www.facebook.com/nramirez36">nramirez36</a></li>
+                    </ul>
+                </div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
