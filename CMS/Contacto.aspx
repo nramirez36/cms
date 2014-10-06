@@ -1,4 +1,4 @@
-﻿<%@ Page Title="TOTAL SALUD - Contacto" Language="C#" MasterPageFile="~/CMS.Master" AutoEventWireup="true" CodeBehind="Contacto.aspx.cs" Inherits="CMS.Contacto" %>
+﻿<%@ Page Title="TODO SALUD - Contacto" Language="C#" MasterPageFile="~/CMS.Master" AutoEventWireup="true" CodeBehind="Contacto.aspx.cs" Inherits="CMS.Contacto" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cpHead" runat="server">
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
@@ -32,7 +32,7 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cpTituloPagina" runat="server">
-    <h1><a href="index.aspx" id="logo">TOTAL SALUD - <em>Contactos</em></a></h1>
+    <h1><a href="index.aspx" id="logo">TODO SALUD - <em>Contactos</em></a></h1>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cpNav" runat="server">
     <ul>
@@ -57,5 +57,5 @@
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="cpHighlights" runat="server">
 </asp:Content>
-<asp:Content ID="Content6" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content6" ContentPlaceHolderID="cpContenido" runat="server">
 </asp:Content>

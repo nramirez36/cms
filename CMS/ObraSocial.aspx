@@ -1,9 +1,9 @@
-﻿<%@ Page Title="TOTAL SALUD - Obras Sociales" Language="C#" MasterPageFile="~/CMS.Master" AutoEventWireup="true" CodeBehind="ObraSocial.aspx.cs" Inherits="CMS.ObraSocial" %>
+﻿<%@ Page Title="TODO SALUD - Obras Sociales" Language="C#" MasterPageFile="~/CMS.Master" AutoEventWireup="true" CodeBehind="ObraSocial.aspx.cs" Inherits="CMS.ObraSocial" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cpHead" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cpTituloPagina" runat="server">
-    <h1><a href="ObraSocial.aspx" id="logo">TOTAL SALUD - <em>Obras Sociales</em></a></h1>
+    <h1><a href="ObraSocial.aspx" id="logo">TODO SALUD - <em>Obras Sociales</em></a></h1>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cpNav" runat="server">
     <ul>
@@ -28,5 +28,5 @@
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="cpHighlights" runat="server">
 </asp:Content>
-<asp:Content ID="Content6" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content6" ContentPlaceHolderID="cpContenido" runat="server">
 </asp:Content>

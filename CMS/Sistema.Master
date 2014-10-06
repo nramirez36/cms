@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CMS.master.cs" Inherits="CMS.CMS" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Sistema.master.cs" Inherits="CMS.Sistema" %>
 
 <!DOCTYPE html>
 
@@ -22,7 +22,7 @@
 
     <script>
         $(document).ready(function () {
-            $(".popupMapa").colorbox({ innerWidth: "700px", innerHeight: "570px", iframe: true });
+            $(".example7").colorbox({ width: "800px", height: "500px", iframe: true });
 
             $("#click").click(function () {
                 $('#click').css({ "background-color": "#f00", "color": "#fff", "cursor": "inherit" }).text("Open this window again and this message will still be here.");
@@ -45,7 +45,7 @@
     <form id="form1" runat="server">
         <div>
             <!-- Header -->
-            <div id="header">                
+            <div id="header">
                 <!-- Logo -->
                 <asp:ContentPlaceHolder ID="cpTituloPagina" runat="server"></asp:ContentPlaceHolder>
                 <!-- Nav -->
@@ -81,14 +81,6 @@
                     </header>
                 </div>
             </section>--%>
-            <section class="wrapper style1">
-                <div class="container">
-                    <asp:ContentPlaceHolder ID="cpContenido" runat="server">
-                    </asp:ContentPlaceHolder>
-                </div>
-            </section>
-
-
             <!-- Footer -->
             <div id="footer">
                 <div class="container">
@@ -99,22 +91,20 @@
                                     <h3>Contacto</h3>
                                     <ul class="links">
                                         <li><u>Telefonos:</u></li>
-                                        <li><b>(0351) 492-2772</b></li>
-                                        <li><b>(0351) 492-3602</b></li>
+                                        <li><b>(0351) 492-2772</b> - <b>(0351) 492-3602</b></li>
                                         <li><u>Email:</u></li>
-                                        <li><b>test@email.com</b></li>
+                                        <li><b>test@Email.com</b></li>
                                         <li><u>Pagina Web:</u></li>
-                                        <li><a href="http://www.google.com"><b>www.sitioweb.com</b></a></li>
+                                        <li><b>www.adsad.com</b></li>
                                     </ul>
                                 </section>
                                 <section class="6u">
                                     <h3>Sedes</h3>
                                     <ul class="links">
                                         <li><u>Dirección</u></li>
-                                        <li><b>Sesarego esq. Anchorena</b></li>
-                                        <li><b>B° Jorge Newberry</b></li>
+                                        <li><b>Sesarego esq. Anchorena B° Jorge Newberry</b></li>
                                         <li><u>Mapa:</u></li>
-                                        <li><a href="Mapa.aspx" class="popupMapa">
+                                        <li><a href="Mapa.aspx" class="example7">
                                             <img alt="" src="images/Google-Maps-icon.png" style="width: 40px; height: 40px" />
                                         </a>
                                         </li>
@@ -167,6 +157,8 @@
                         <li>Diseño y Desarrollo: <a href="http://www.facebook.com/nramirez36">nramirez36</a></li>
                     </ul>
                 </div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
             </div>
         </div>
     </form>

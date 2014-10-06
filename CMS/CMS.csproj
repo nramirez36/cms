@@ -100,6 +100,7 @@
     <Content Include="js\jquery.min.js" />
     <Content Include="js\skel-layers.min.js" />
     <Content Include="js\skel.min.js" />
+    <Content Include="Login.aspx" />
     <Content Include="Mapa.aspx" />
     <Content Include="Nosotros.aspx" />
     <Content Include="Novedades.aspx" />
@@ -146,6 +147,13 @@
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Mapa.aspx.cs">
       <DependentUpon>Mapa.aspx</DependentUpon>
@@ -197,6 +205,13 @@
     <Compile Include="QuienesSomos.aspx.designer.cs">
       <DependentUpon>QuienesSomos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Sistema.Master.cs">
+      <DependentUpon>Sistema.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema.Master.designer.cs">
+      <DependentUpon>Sistema.Master</DependentUpon>
+    </Compile>
     <Compile Include="Ubicacion.aspx.cs">
       <DependentUpon>Ubicacion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -228,6 +243,7 @@
     <Content Include="sass\_mixins.scss" />
     <Content Include="sass\_vars.scss" />
     <Content Include="CMS.Master" />
+    <Content Include="Sistema.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,9 +1,9 @@
-﻿<%@ Page Title="TOTAL SALUD - Inicio" Language="C#" MasterPageFile="~/CMS.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="CMS.index" %>
+﻿<%@ Page Title="TODO SALUD - Inicio" Language="C#" MasterPageFile="~/CMS.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="CMS.index" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cpHead" runat="server">
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="cpTituloPagina" runat="server">
-    <h1><a href="index.aspx" id="logo">Bienvenido a <em>TOTAL SALUD </em></a></h1>
+    <h1><a href="index.aspx" id="logo">Bienvenido a <em>TODO SALUD </em></a></h1>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cpNav" runat="server">
     <ul>
@@ -61,7 +61,7 @@
         </div>
     </section>
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content3" ContentPlaceHolderID="cpContenido" runat="server">
 </asp:Content>
 <asp:Content ID="Content7" ContentPlaceHolderID="cpGiganticHeading" runat="server">
     <section class="wrapper style2">
@@ -82,7 +82,7 @@
                         <a href="#" class="image left">
                             <img src="images/pic01.jpg" alt="" /></a>
                         <div class="inner">
-                            <h3>The First Thing</h3>
+                            <h3>Novedades sobre salud</h3>
                             <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
                         </div>
                     </div>
@@ -92,7 +92,7 @@
                         <a href="#" class="image left">
                             <img src="images/pic02.jpg" alt="" /></a>
                         <div class="inner">
-                            <h3>The Second Thing</h3>
+                            <h3>Calendario Vacunas</h3>
                             <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
                         </div>
                     </div>

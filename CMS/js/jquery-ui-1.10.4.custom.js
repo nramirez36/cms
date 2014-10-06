@@ -5770,7 +5770,7 @@ $.widget( "ui.accordion", {
 	},
 
 	_animate: function( toShow, toHide, data ) {
-		var total, easing, duration,
+		var TODO, easing, duration,
 			that = this,
 			adjust = 0,
 			down = toShow.length &&
@@ -5798,7 +5798,7 @@ $.widget( "ui.accordion", {
 			return toHide.animate( hideProps, duration, easing, complete );
 		}
 
-		total = toShow.show().outerHeight();
+		TODO = toShow.show().outerHeight();
 		toHide.animate( hideProps, {
 			duration: duration,
 			easing: easing,
@@ -5817,7 +5817,7 @@ $.widget( "ui.accordion", {
 					if ( fx.prop !== "height" ) {
 						adjust += fx.now;
 					} else if ( that.options.heightStyle !== "content" ) {
-						fx.now = Math.round( total - toHide.outerHeight() - adjust );
+						fx.now = Math.round( TODO - toHide.outerHeight() - adjust );
 						adjust = 0;
 					}
 				}
@@ -10626,21 +10626,21 @@ $.widget( "ui.slider", $.ui.mouse, {
 	},
 
 	_normValueFromMouse: function( position ) {
-		var pixelTotal,
+		var pixelTODO,
 			pixelMouse,
 			percentMouse,
-			valueTotal,
+			valueTODO,
 			valueMouse;
 
 		if ( this.orientation === "horizontal" ) {
-			pixelTotal = this.elementSize.width;
+			pixelTODO = this.elementSize.width;
 			pixelMouse = position.x - this.elementOffset.left - ( this._clickOffset ? this._clickOffset.left : 0 );
 		} else {
-			pixelTotal = this.elementSize.height;
+			pixelTODO = this.elementSize.height;
 			pixelMouse = position.y - this.elementOffset.top - ( this._clickOffset ? this._clickOffset.top : 0 );
 		}
 
-		percentMouse = ( pixelMouse / pixelTotal );
+		percentMouse = ( pixelMouse / pixelTODO );
 		if ( percentMouse > 1 ) {
 			percentMouse = 1;
 		}
@@ -10651,8 +10651,8 @@ $.widget( "ui.slider", $.ui.mouse, {
 			percentMouse = 1 - percentMouse;
 		}
 
-		valueTotal = this._valueMax() - this._valueMin();
-		valueMouse = this._valueMin() + percentMouse * valueTotal;
+		valueTODO = this._valueMax() - this._valueMin();
+		valueMouse = this._valueMin() + percentMouse * valueTODO;
 
 		return this._trimAlignValue( valueMouse );
 	},

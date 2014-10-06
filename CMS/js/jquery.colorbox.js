@@ -28,7 +28,7 @@
 		rel: false,
 		opacity: 0.9,
 		preloading: true,
-		current: "image {current} of {total}",
+		current: "image {current} of {TODO}",
 		previous: "previous",
 		next: "next",
 		close: "close",
@@ -478,7 +478,7 @@
 				settings.h = setSize(options.innerHeight, 'y');
 			}
 			if (!options.innerHeight && !options.height) {				
-				var $child = $loaded.wrapInner("<div style='overflow:auto'></div>").children(); // temporary wrapper to get an accurate estimate of just how high the total content should be.
+				var $child = $loaded.wrapInner("<div style='overflow:auto'></div>").children(); // temporary wrapper to get an accurate estimate of just how high the TODO content should be.
 				settings.h = $child.height();
 				$child.replaceWith($child.children()); // ditch the temporary wrapper div used in height calculation
 			}
@@ -534,7 +534,7 @@
 		
 		function setPosition(s) {
 			publicMethod.position(s, function () {
-				var prev, prevSrc, next, nextSrc, total = $related.length, iframe, complete;
+				var prev, prevSrc, next, nextSrc, TODO = $related.length, iframe, complete;
 				
 				if (!open) {
 					return;
@@ -554,16 +554,16 @@
 				
 				$title.html(settings.title).add($loaded).show();
 				
-				if (total > 1) { // handle grouping
+				if (TODO > 1) { // handle grouping
 					if (typeof settings.current === "string") {
-						$current.html(settings.current.replace(/\{current\}/, index + 1).replace(/\{total\}/, total)).show();
+						$current.html(settings.current.replace(/\{current\}/, index + 1).replace(/\{TODO\}/, TODO)).show();
 					}
 					
-					$next[(settings.loop || index < total - 1) ? "show" : "hide"]().html(settings.next);
+					$next[(settings.loop || index < TODO - 1) ? "show" : "hide"]().html(settings.next);
 					$prev[(settings.loop || index) ? "show" : "hide"]().html(settings.previous);
 					
-					prev = index ? $related[index - 1] : $related[total - 1];
-					next = index < total - 1 ? $related[index + 1] : $related[0];
+					prev = index ? $related[index - 1] : $related[TODO - 1];
+					next = index < TODO - 1 ? $related[index + 1] : $related[0];
 					
 					if (settings.slideshow) {
 						$slideshow.show();

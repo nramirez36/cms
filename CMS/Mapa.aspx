@@ -5,8 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>TOTAL SALUD - Donde Estamos</title>
-<%--    <script src="js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>--%>
+    <title>TODO SALUD - Donde Estamos</title>
+    <%--    <script src="js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>--%>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script type="text/javascript">
         function InitializeMap() {
@@ -20,7 +20,7 @@
             var marker = new google.maps.Marker({
                 position: latlng,
                 map: map,
-                title: 'TOTAL SALUD'
+                title: 'TODO SALUD'
             });
             marker.info = new google.maps.InfoWindow({
                 content: 'Dirección: <br/>Sesarego esq. Anchorena <br/>B° Jorge Newberry'
@@ -32,10 +32,10 @@
     </script>
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div>
-            <div id="map" style="width: 100%; height: 500px" />
-        </div>
-    </form>
+    <%--<form id="form1" runat="server">--%>
+    <div id="map" style="width: 600px; height: 400px;" />
+
+
+    <%--</form>--%>
 </body>
 </html>

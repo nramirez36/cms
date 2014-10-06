@@ -20,14 +20,14 @@
 */
 #cboxOverlay{background:url(images/overlay.png) repeat 0 0;}
 #colorbox{}
-    #cboxTopLeft{width:21px; height:21px; background:url(images/controls.png) no-repeat -100px 0;}
-    #cboxTopRight{width:21px; height:21px; background:url(images/controls.png) no-repeat -129px 0;}
-    #cboxBottomLeft{width:21px; height:21px; background:url(images/controls.png) no-repeat -100px -29px;}
-    #cboxBottomRight{width:21px; height:21px; background:url(images/controls.png) no-repeat -129px -29px;}
-    #cboxMiddleLeft{width:21px; background:url(images/controls.png) left top repeat-y;}
-    #cboxMiddleRight{width:21px; background:url(images/controls.png) right top repeat-y;}
-    #cboxTopCenter{height:21px; background:url(images/border.png) 0 0 repeat-x;}
-    #cboxBottomCenter{height:21px; background:url(images/border.png) 0 -29px repeat-x;}
+    #cboxTopLeft{width:25px; height:25px; background:url(images/controls.png) no-repeat -100px 0;}
+    #cboxTopRight{width:25px; height:25px; background:url(images/controls.png) no-repeat -129px 0;}
+    #cboxBottomLeft{width:25px; height:25px; background:url(images/controls.png) no-repeat -100px -29px;}
+    #cboxBottomRight{width:25px; height:25px; background:url(images/controls.png) no-repeat -129px -29px;}
+    #cboxMiddleLeft{width:25px; background:url(images/controls.png) left top repeat-y;}
+    #cboxMiddleRight{width:25px; background:url(images/controls.png) right top repeat-y;}
+    #cboxTopCenter{height:25px; background:url(images/border.png) 0 0 repeat-x;}
+    #cboxBottomCenter{height:25px; background:url(images/border.png) 0 -29px repeat-x;}
     #cboxContent{background:#fff; overflow:hidden;}
         #cboxError{padding:50px; border:1px solid #ccc;}
         #cboxLoadedContent{margin-bottom:28px;}
