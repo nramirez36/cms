@@ -48,7 +48,9 @@
             <div class="12u">
                 <ul class="actions">
                     <li>
-                        <input type="submit" class="button alt" value="Ingresar" /></li>
+                        <%--<input type="submit" class="button alt" value="Ingresar" />--%>
+                        <asp:Button ID="btnLogin" runat="server" CssClass="button alt" Text="Ingresar" OnClick="btnLogin_Click" />
+                    </li>
                 </ul>
             </div>
         </div>

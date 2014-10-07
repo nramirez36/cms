@@ -46,16 +46,23 @@
         <div>
             <!-- Header -->
             <div id="header">
-                <!-- Logo -->
-                <asp:ContentPlaceHolder ID="cpTituloPagina" runat="server"></asp:ContentPlaceHolder>
-                <ul class="actions">
-                    <li><a href="#" class="button special">Acceder al Sistema</a></li>
-                </ul>
+                <div class="row">
+                    <div class="4u">
+                        <span class="me image image-full">
+                            <img src="images/logo.jpg" alt="" id="logoIMG" /></span>
+                    </div>
+                    <div class="4u">
+                        <asp:ContentPlaceHolder ID="cpTituloPagina" runat="server"></asp:ContentPlaceHolder>
+                    </div>
+                    <div class="4u">
+                        <asp:Button ID="btnAcceder" CssClass="button special" runat="server" Text="Acceder al Sistema" OnClick="btnAcceder_Click" />
+                    </div>
+                </div>
+
                 <!-- Nav -->
                 <nav id="nav">
                     <asp:ContentPlaceHolder ID="cpNav" runat="server"></asp:ContentPlaceHolder>
                 </nav>
-                
             </div>
             <!-- Banner -->
             <asp:ContentPlaceHolder ID="cpSlider" runat="server">
@@ -91,8 +98,6 @@
                     </asp:ContentPlaceHolder>
                 </div>
             </section>
-
-
             <!-- Footer -->
             <div id="footer">
                 <div class="container">
@@ -146,7 +151,8 @@
                                     <div class="12u">
                                         <ul class="actions">
                                             <li>
-                                                <input type="submit" class="button alt" value="Enviar Mensaje" /></li>
+                                                <asp:Button ID="btnEnviarMensaje" runat="server" CssClass="button alt" Text="Enviar Mensaje" />
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>

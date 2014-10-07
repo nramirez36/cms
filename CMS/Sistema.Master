@@ -44,15 +44,23 @@
         <div>
             <!-- Header -->
             <div id="header">
-
-                <!-- Logo -->
-                <asp:ContentPlaceHolder ID="cpTituloPagina" runat="server"></asp:ContentPlaceHolder>
+                <div class="row">
+                    <div class="4u">
+                        <span class="me image image-full">
+                            <img src="images/logo.jpg" alt="" id="logoIMG" /></span>
+                    </div>
+                    <div class="4u">
+                        <asp:ContentPlaceHolder ID="cpTituloPagina" runat="server"></asp:ContentPlaceHolder>
+                    </div>
+                    <%--<div class="4u">
+                        <a href="#" class="button special">Acceder al Sistema</a>
+                    </div>--%>
+                </div>
 
                 <!-- Nav -->
                 <nav id="nav">
                     <asp:ContentPlaceHolder ID="cpNav" runat="server"></asp:ContentPlaceHolder>
                 </nav>
-
             </div>
 
             <!-- Main -->

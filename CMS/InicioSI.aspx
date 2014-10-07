@@ -20,3 +20,6 @@
         <li><a href="Contacto.aspx">Contacto</a></li>
     </ul>
 </asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="cpTituloPagina" runat="server">
+    <h1><a href="index.aspx" id="logo">TODO SALUD - <em>Sistema WEB</em></a></h1>
+</asp:Content>

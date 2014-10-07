@@ -839,3 +839,8 @@ input[type="button"],
         text-align: center;
         font-size: 0.9em;
     }
+#logoIMG {
+    width:150px; 
+    height:125px;
+    padding-bottom:25px;
+}

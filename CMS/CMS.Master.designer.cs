@@ -40,6 +40,15 @@ namespace CMS {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder cpTituloPagina;
         
         /// <summary>
+        /// Control btnAcceder.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAcceder;
+        
+        /// <summary>
         /// Control cpNav.
         /// </summary>
         /// <remarks>
@@ -92,5 +101,14 @@ namespace CMS {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder cpContenido;
+        
+        /// <summary>
+        /// Control btnEnviarMensaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnEnviarMensaje;
     }
 }
