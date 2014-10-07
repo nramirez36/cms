@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode title="Inicio">
+    <siteMapNode url="index.aspx" title="Inicio"/>
+    <siteMapNode title="Carpeta">
+      <siteMapNode url="InicioSI.aspx" title="Pagina Principal" />
+    </siteMapNode>
+    <siteMapNode title="Otra Carpeta">
+      <siteMapNode url="AccesoSI.aspx" title="Acceso SI" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

@@ -90,6 +90,7 @@
     <Content Include="images\pic03.jpg" />
     <Content Include="images\pic04.jpg" />
     <Content Include="index.aspx" />
+    <Content Include="InicioSI.aspx" />
     <Content Include="js\init.js" />
     <Content Include="js\jquery-1.4.2.min.js" />
     <Content Include="js\jquery-ui-1.10.4.custom.js" />
@@ -147,6 +148,13 @@
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InicioSI.aspx.cs">
+      <DependentUpon>InicioSI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InicioSI.aspx.designer.cs">
+      <DependentUpon>InicioSI.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -250,6 +258,7 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="Web.sitemap" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -45,13 +45,17 @@
     <form id="form1" runat="server">
         <div>
             <!-- Header -->
-            <div id="header">                
+            <div id="header">
                 <!-- Logo -->
                 <asp:ContentPlaceHolder ID="cpTituloPagina" runat="server"></asp:ContentPlaceHolder>
+                <ul class="actions">
+                    <li><a href="#" class="button special">Acceder al Sistema</a></li>
+                </ul>
                 <!-- Nav -->
                 <nav id="nav">
                     <asp:ContentPlaceHolder ID="cpNav" runat="server"></asp:ContentPlaceHolder>
                 </nav>
+                
             </div>
             <!-- Banner -->
             <asp:ContentPlaceHolder ID="cpSlider" runat="server">
