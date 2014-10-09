@@ -72,20 +72,49 @@
 
                                 <!-- Sidebar -->
 
-                                <section>
-                                    <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" BackColor="#2e2e2e" DynamicHorizontalOffset="2" Font-Names="Source Sans Pro,sans-serif" Font-Size="100%" ForeColor="white" StaticSubMenuIndent="10px" BorderStyle="None" BorderWidth="0px">
-                                        <DynamicHoverStyle BackColor="#7C6F57" ForeColor="White" />
+                                <%--<section>
+                                    <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" BackColor="#2e2e2e" DynamicHorizontalOffset="2" Font-Names="Source Sans Pro,sans-serif" Font-Size="100%" ForeColor="white" StaticSubMenuIndent="10px">
+                                        <DynamicHoverStyle BackColor="#2e2e2e" ForeColor="White" />
                                         <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
-                                        <DynamicMenuStyle BackColor="#F7F6F3" />
-                                        <DynamicSelectedStyle BackColor="#5D7B9D" />
-                                        <StaticHoverStyle BackColor="#7C6F57" ForeColor="White" />
+                                        <DynamicMenuStyle BackColor="#2e2e2e" />
+                                        <DynamicSelectedStyle BackColor="#2e2e2e" />
+                                        <StaticHoverStyle BackColor="#2e2e2e" ForeColor="White" />
                                         <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
-                                        <StaticSelectedStyle BackColor="#5D7B9D" />
+                                        <StaticSelectedStyle BackColor="#2e2e2e" />
                                     </asp:Menu>
                                     <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="false" />
+                                </section>--%>
+                                <section id="navigation">
+                                    <ul>
+                                        <%--<li>
+                                            <asp:HyperLink runat="server" ID="lnkHome" NavigateUrl="~/Default.aspx">Home</asp:HyperLink>
+                                        </li>--%>
+                                        <asp:Repeater runat="server" ID="menu" DataSourceID="SiteMapDataSource1">
+                                            <ItemTemplate>
+                                                <li>
+                                                    <asp:HyperLink ID="lnkMenuItem" runat="server" NavigateUrl='<%# Eval("Url") %>'><%# Eval("Title") %></asp:HyperLink>
+
+                                                    <asp:Repeater ID="submenu" runat="server" DataSource="<%# ((SiteMapNode) Container.DataItem).ChildNodes %>">
+                                                        <HeaderTemplate>
+                                                            <ul>
+                                                        </HeaderTemplate>
+                                                        <ItemTemplate>
+                                                            <li>
+                                                                <asp:HyperLink ID="lnkMenuItem" runat="server" NavigateUrl='<%# Eval("Url") %>'><%# Eval("Title") %></asp:HyperLink>
+                                                            </li>
+                                                        </ItemTemplate>
+                                                        <FooterTemplate>
+                                                            </ul>
+                                                        </FooterTemplate>
+                                                    </asp:Repeater>
+                                                </li>
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+                                    </ul>
+                                    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="false" />
                                 </section>
-        </div>
-        </div>
+                            </div>
+                        </div>
                         <div class="8u skel-cell-important">
                             <div id="content">
 
@@ -131,89 +160,89 @@
 
                             </div>
                         </div>
-        </div>
+                    </div>
                 </div>
             </section>
 
             <!-- Footer -->
-        <div id="footer">
-            <div class="container">
-                <div class="row ">
-                    <div class="6u">
-                        <div class="row collapse-at-2">
-                            <section class="6u">
-                                <h3>Contacto</h3>
-                                <ul class="links">
-                                    <li><u>Telefonos:</u></li>
-                                    <li><b>(0351) 492-2772</b></li>
-                                    <li><b>(0351) 492-3602</b></li>
-                                    <li><u>Email:</u></li>
-                                    <li><b>test@email.com</b></li>
-                                    <li><u>Pagina Web:</u></li>
-                                    <li><a href="http://www.google.com"><b>www.sitioweb.com</b></a></li>
-                                </ul>
-                            </section>
-                            <section class="6u">
-                                <h3>Sedes</h3>
-                                <ul class="links">
-                                    <li><u>Dirección</u></li>
-                                    <li><b>Sesarego esq. Anchorena</b></li>
-                                    <li><b>B° Jorge Newberry</b></li>
-                                    <li><u>Mapa:</u></li>
-                                    <li><a href="Mapa.aspx" class="popupMapa">
-                                        <img alt="" src="images/Google-Maps-icon.png" style="width: 40px; height: 40px" />
-                                    </a>
-                                    </li>
-                                </ul>
-                            </section>
-                        </div>
-                    </div>
-                    <section class="6u">
-                        <h3>Consultas:</h3>
-                        <form>
-                            <div class="row half collapse-at-2">
-                                <div class="6u">
-                                    <input type="text" name="name" id="name" placeholder="Nombre" />
-                                </div>
-                                <div class="6u">
-                                    <input type="email" name="email" id="email" placeholder="Email" />
-                                </div>
-                            </div>
-                            <div class="row half">
-                                <div class="12u">
-                                    <textarea name="message" id="message" placeholder="Mensaje" rows="3"></textarea>
-                                </div>
-                            </div>
-                            <div class="row half">
-                                <div class="12u">
-                                    <ul class="actions">
-                                        <li>
-                                            <input type="submit" class="button alt" value="Enviar Mensaje" /></li>
+            <div id="footer">
+                <div class="container">
+                    <div class="row ">
+                        <div class="6u">
+                            <div class="row collapse-at-2">
+                                <section class="6u">
+                                    <h3>Contacto</h3>
+                                    <ul class="links">
+                                        <li><u>Telefonos:</u></li>
+                                        <li><b>(0351) 492-2772</b></li>
+                                        <li><b>(0351) 492-3602</b></li>
+                                        <li><u>Email:</u></li>
+                                        <li><b>test@email.com</b></li>
+                                        <li><u>Pagina Web:</u></li>
+                                        <li><a href="http://www.google.com"><b>www.sitioweb.com</b></a></li>
                                     </ul>
-                                </div>
+                                </section>
+                                <section class="6u">
+                                    <h3>Sedes</h3>
+                                    <ul class="links">
+                                        <li><u>Dirección</u></li>
+                                        <li><b>Sesarego esq. Anchorena</b></li>
+                                        <li><b>B° Jorge Newberry</b></li>
+                                        <li><u>Mapa:</u></li>
+                                        <li><a href="Mapa.aspx" class="popupMapa">
+                                            <img alt="" src="images/Google-Maps-icon.png" style="width: 40px; height: 40px" />
+                                        </a>
+                                        </li>
+                                    </ul>
+                                </section>
                             </div>
-                        </form>
-                    </section>
+                        </div>
+                        <section class="6u">
+                            <h3>Consultas:</h3>
+                            <form>
+                                <div class="row half collapse-at-2">
+                                    <div class="6u">
+                                        <input type="text" name="name" id="name" placeholder="Nombre" />
+                                    </div>
+                                    <div class="6u">
+                                        <input type="email" name="email" id="email" placeholder="Email" />
+                                    </div>
+                                </div>
+                                <div class="row half">
+                                    <div class="12u">
+                                        <textarea name="message" id="message" placeholder="Mensaje" rows="3"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row half">
+                                    <div class="12u">
+                                        <ul class="actions">
+                                            <li>
+                                                <input type="submit" class="button alt" value="Enviar Mensaje" /></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </form>
+                        </section>
+                    </div>
+                </div>
+
+                <!-- Icons -->
+                <ul class="icons">
+                    <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                    <%--<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>--%>
+                    <li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                    <li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+                </ul>
+
+                <!-- Copyright -->
+                <div class="copyright">
+                    <ul class="menu">
+                        <li>&copy; TODO SALUD. Todos los derechos reservados.</li>
+                        <li>Diseño y Desarrollo: <a href="http://www.facebook.com/nramirez36">nramirez36</a></li>
+                    </ul>
                 </div>
             </div>
-
-            <!-- Icons -->
-            <ul class="icons">
-                <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-                <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-                <%--<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>--%>
-                <li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                <li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
-            </ul>
-
-            <!-- Copyright -->
-            <div class="copyright">
-                <ul class="menu">
-                    <li>&copy; TODO SALUD. Todos los derechos reservados.</li>
-                    <li>Diseño y Desarrollo: <a href="http://www.facebook.com/nramirez36">nramirez36</a></li>
-                </ul>
-            </div>
-        </div>
         </div>
     </form>
 </body>

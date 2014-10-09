@@ -49,13 +49,13 @@ namespace CMS {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder cpNav;
         
         /// <summary>
-        /// Control Menu1.
+        /// Control menu.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Menu Menu1;
+        protected global::System.Web.UI.WebControls.Repeater menu;
         
         /// <summary>
         /// Control SiteMapDataSource1.
