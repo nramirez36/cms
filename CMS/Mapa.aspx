@@ -33,7 +33,7 @@
 </head>
 <body>
     <%--<form id="form1" runat="server">--%>
-    <div id="map" style="width: 600px; height: 400px;" />
+    <div id="map" style="width: 500px; height: 350px;" />
 
 
     <%--</form>--%>

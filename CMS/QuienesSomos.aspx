@@ -7,7 +7,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="cpNav" runat="server">
     <ul>
         <li><a href="index.aspx">Inicio</a></li>
-        <li>
+        <li class="current">
             <a href="Nosotros.aspx">Nosotros</a>
             <ul>
                 <li class="current"><a href="QuienesSomos.aspx">Quienes Somos</a></li>

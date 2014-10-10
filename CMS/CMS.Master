@@ -22,7 +22,7 @@
 
     <script>
         $(document).ready(function () {
-            $(".popupMapa").colorbox({ innerWidth: "700px", innerHeight: "570px", iframe: true });
+            $(".popupMapa").colorbox({ innerWidth: "600px", innerHeight: "400px", iframe: true });
 
             $("#click").click(function () {
                 $('#click').css({ "background-color": "#f00", "color": "#fff", "cursor": "inherit" }).text("Open this window again and this message will still be here.");
@@ -69,29 +69,8 @@
             </asp:ContentPlaceHolder>
             <!-- Highlights -->
             <asp:ContentPlaceHolder ID="cpHighlights" runat="server"></asp:ContentPlaceHolder>
-            <!-- Gigantic Heading -->
-            <asp:ContentPlaceHolder ID="cpGiganticHeading" runat="server"></asp:ContentPlaceHolder>
-            <%--<section class="wrapper style2">
-                <div class="container">
-                    <header class="major">
-                        <h2>A gigantic heading you can use for whatever</h2>
-                        <p>Aca se podria poner una frase o lema de la institucion</p>
-                    </header>
-                </div>
-            </section>--%>
             <!-- Posts -->
             <asp:ContentPlaceHolder ID="cpNovedades" runat="server"></asp:ContentPlaceHolder>
-
-
-            <%--<!-- CTA -->
-            <section id="cta" class="wrapper style3">
-                <div class="container">
-                    <header>
-                        <h2>Are you ready to continue your quest?</h2>
-                        <a href="#" class="button">Insert Coin</a>
-                    </header>
-                </div>
-            </section>--%>
             <section class="wrapper style1">
                 <div class="container">
                     <asp:ContentPlaceHolder ID="cpContenido" runat="server">

@@ -61,18 +61,6 @@
         </div>
     </section>
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="cpContenido" runat="server">
-</asp:Content>
-<asp:Content ID="Content7" ContentPlaceHolderID="cpGiganticHeading" runat="server">
-    <section class="wrapper style2">
-        <div class="container">
-            <header class="major">
-                <h2>A gigantic heading you can use for whatever</h2>
-                <p>Aca se podria poner una frase o lema de la institucion</p>
-            </header>
-        </div>
-    </section>
-</asp:Content>
 <asp:Content ContentPlaceHolderID="cpNovedades" ID="Content8" runat="server">
     <section class="wrapper style1">
         <div class="container">
@@ -122,4 +110,6 @@
             </div>
         </div>
     </section>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="cpContenido" runat="server">
 </asp:Content>
