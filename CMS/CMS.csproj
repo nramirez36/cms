@@ -105,7 +105,6 @@
     <Content Include="Mapa.aspx" />
     <Content Include="Nosotros.aspx" />
     <Content Include="Novedades.aspx" />
-    <Content Include="ObraSocial.aspx" />
     <Content Include="Pacientes.aspx" />
     <Content Include="Prestaciones.aspx" />
     <Content Include="QuienesSomos.aspx" />
@@ -183,13 +182,6 @@
     </Compile>
     <Compile Include="Novedades.aspx.designer.cs">
       <DependentUpon>Novedades.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ObraSocial.aspx.cs">
-      <DependentUpon>ObraSocial.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ObraSocial.aspx.designer.cs">
-      <DependentUpon>ObraSocial.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pacientes.aspx.cs">
       <DependentUpon>Pacientes.aspx</DependentUpon>

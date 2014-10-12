@@ -48,7 +48,6 @@
         </li>
         <li><a href="Pacientes.aspx">Pacientes</a></li>
         <li><a href="Prestaciones.aspx">Prestaciones</a></li>
-        <li><a href="ObraSocial.aspx">Obra Social</a></li>
         <li><a href="Novedades.aspx">Novedades</a></li>
         <li class="current"><a href="Contacto.aspx">Contacto</a></li>
     </ul>
