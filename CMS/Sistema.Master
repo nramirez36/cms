@@ -20,7 +20,7 @@
 
     <script>
         $(document).ready(function () {
-            $(".example7").colorbox({ width: "800px", height: "500px", iframe: true });
+            $(".popupMapa").colorbox({ innerWidth: "600px", innerHeight: "400px", iframe: true });
 
             $("#click").click(function () {
                 $('#click').css({ "background-color": "#f00", "color": "#fff", "cursor": "inherit" }).text("Open this window again and this message will still be here.");
@@ -102,10 +102,10 @@
                                 <!-- Content -->
 
                                 <article>
-                                    <header>
+                                   <%-- <header>
                                         <h2>Titulo del Contenido</h2>
                                         <p>Sidebar on the left, content on the right.</p>
-                                    </header>
+                                    </header>--%>
                                     <asp:ContentPlaceHolder ID="cpContenido" runat="server"></asp:ContentPlaceHolder>
                                 </article>
                             </div>

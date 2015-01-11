@@ -1,4 +1,4 @@
-﻿<%@ Page Title="TODO SALUD - Acceso al Sistema" Language="C#" MasterPageFile="~/CMS.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="CMS.Login" %>
+﻿<%@ Page Title="nramirez36 - Acceso al Sistema" Language="C#" MasterPageFile="~/CMS.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="CMS.Login" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cpHead" runat="server">
 </asp:Content>
@@ -17,8 +17,6 @@
                 <li><a href="Ubicacion.aspx">Ubicación</a></li>
             </ul>
         </li>
-        <li><a href="Pacientes.aspx">Pacientes</a></li>
-        <li><a href="Prestaciones.aspx">Prestaciones</a></li>
         <li><a href="Novedades.aspx">Novedades</a></li>
         <li><a href="Contacto.aspx">Contacto</a></li>
     </ul>

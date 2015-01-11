@@ -1,8 +1,8 @@
-﻿<%@ Page Title="TODO SALUD - Ingreso al Sistema" Language="C#" MasterPageFile="~/CMS.Master" AutoEventWireup="true" CodeBehind="AccesoSI.aspx.cs" Inherits="CMS.AccesoSI" %>
+﻿<%@ Page Title="nramirez36 - Ingreso al Sistema" Language="C#" MasterPageFile="~/CMS.Master" AutoEventWireup="true" CodeBehind="AccesoSI.aspx.cs" Inherits="CMS.AccesoSI" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cpHead" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cpTituloPagina" runat="server">
-    <h1><a href="index.aspx" id="logo">TODO SALUD - <em>Acceso al Sistema</em></a></h1>
+    <h1><a href="index.aspx" id="logo">nramirez36 - <em>Acceso al Sistema</em></a></h1>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cpNav" runat="server">
     <ul>

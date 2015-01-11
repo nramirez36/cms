@@ -14,5 +14,6 @@
 /* Banner */
 
 	#banner {
-		height: 24em;
+		/*height: 24em;*/
+        height: 18em;
 	}

@@ -10,7 +10,7 @@
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script type="text/javascript">
         function InitializeMap() {
-            var latlng = new google.maps.LatLng(-31.3505777, -64.176546);
+            var latlng = new google.maps.LatLng(-31.4825991, -64.2486434);
             var myOptions = {
                 zoom: 15,
                 center: latlng,
@@ -20,10 +20,10 @@
             var marker = new google.maps.Marker({
                 position: latlng,
                 map: map,
-                title: 'TODO SALUD'
+                title: 'nramirez36'
             });
             marker.info = new google.maps.InfoWindow({
-                content: 'Dirección: <br/>Sesarego esq. Anchorena <br/>B° Jorge Newberry'
+                content: 'Dirección: <br/>Belice 6060 <br/>B° Parque Futura'
             });
             google.maps.event.addListener(marker, "mouseover", function () { marker.info.open(map, marker); });
             marker.info.open(map, marker);

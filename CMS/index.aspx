@@ -1,9 +1,9 @@
-﻿<%@ Page Title="TODO SALUD - Inicio" Language="C#" MasterPageFile="~/CMS.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="CMS.index" %>
+﻿<%@ Page Title="nramirez36 - Inicio" Language="C#" MasterPageFile="~/CMS.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="CMS.index" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cpHead" runat="server">
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="cpTituloPagina" runat="server">
-    <h1><a href="index.aspx" id="logo">Bienvenido a <em>TODO SALUD </em></a></h1>
+    <h1><a href="index.aspx" id="logo">Bienvenido a <em>nramirez36 </em></a></h1>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cpNav" runat="server">
     <ul>
@@ -17,8 +17,6 @@
                 <li><a href="Ubicacion.aspx">Ubicación</a></li>
             </ul>
         </li>
-        <li><a href="Pacientes.aspx">Pacientes</a></li>
-        <li><a href="Prestaciones.aspx">Prestaciones</a></li>
         <li><a href="Novedades.aspx">Novedades</a></li>
         <li><a href="Contacto.aspx">Contacto</a></li>
     </ul>
@@ -26,10 +24,12 @@
 <asp:Content ID="Content5" ContentPlaceHolderID="cpSlider" runat="server">
     <section id="banner">
         <header>
-            <h2>Arcana: <em>Aca va el slider con novedades o con imagenes relacionadas</em></h2>
+            <h2>nramirez36 - <em>Sistemas Informaticos</em></h2>
             <a href="#" class="button">Learn More</a>
+
         </header>
     </section>
+    >
 </asp:Content>
 <asp:Content ID="Content6" ContentPlaceHolderID="cpHighlights" runat="server">
     <section class="wrapper style1">
@@ -107,7 +107,6 @@
                     </div>
                 </section>
             </div>
-        </div>
     </section>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cpContenido" runat="server">
