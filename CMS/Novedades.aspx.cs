@@ -10,7 +10,7 @@ namespace CMS
 {
     public partial class Novedades : System.Web.UI.Page
     {
-        List<Novedad> novedadesMostrar = new List<Novedad>();
+        List<Novedad> novedadesMostrar = new List<Novedad>();        
 
         protected void Page_Load(object sender, EventArgs e)
         {

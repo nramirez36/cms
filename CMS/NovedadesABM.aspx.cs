@@ -288,10 +288,10 @@ namespace CMS
         {
             txtTitulo.Text = novedadSeleccionada.titulo;
             txtMensaje.Text = novedadSeleccionada.mensaje_web;
-            if (novedadSeleccionada.es_html)
-                rbHtml.Checked = true;
-            else
-                rbHtml.Checked = false;
+            //if (novedadSeleccionada.es_html)
+            //    rbHtml.Checked = true;
+            //else
+            //    rbHtml.Checked = false;
             if (novedadSeleccionada.es_historica)
                 rbHistorica.Checked = true;
             else
@@ -323,7 +323,7 @@ namespace CMS
             novedad.mensaje_web = txtMensaje.Text;
             novedad.titulo = txtTitulo.Text;
             novedad.mensaje = novedad.titulo + " - " + novedad.mensaje_web;
-            novedad.es_html = rbHtml.Checked;
+            //novedad.es_html = rbHtml.Checked;
             novedad.es_historica = rbHistorica.Checked;
             novedad.es_imagen = rbImagen.Checked;
             novedad.descripcion_breve = txtDescripcionBreve.Text;

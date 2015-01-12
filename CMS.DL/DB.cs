@@ -8,7 +8,6 @@ namespace CMS.DL
 {
     public static class DB
     {
-        //private static string strConexion = "Data Source=PLANET\\SQLEXPRESS;Initial Catalog=MediSys;Persist Security Info=True;User ID=Admin;Password=grupo1";
         private static string strConexion = "Data Source=(local)\\sqlexpress;Initial Catalog=nramirez36-CMS;Integrated Security=True";
 
         public static SqlConnection Conectar()

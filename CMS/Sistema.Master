@@ -102,7 +102,7 @@
                                 <!-- Content -->
 
                                 <article>
-                                   <%-- <header>
+                                    <%-- <header>
                                         <h2>Titulo del Contenido</h2>
                                         <p>Sidebar on the left, content on the right.</p>
                                     </header>--%>
@@ -124,20 +124,21 @@
                                     <h3>Contacto</h3>
                                     <ul class="links">
                                         <li><u>Telefonos:</u></li>
-                                        <li><b>(0351) 492-2772</b></li>
-                                        <li><b>(0351) 492-3602</b></li>
+                                        <li><b>(0351) 152166594</b></li>
                                         <li><u>Email:</u></li>
-                                        <li><b>test@email.com</b></li>
+                                        <li><b>nramirez36@hotmail.com</b></li>
+                                        <li><u>Skype:</u></li>
+                                        <li><b>nramirez363</b></li>
                                         <li><u>Pagina Web:</u></li>
-                                        <li><a href="http://www.google.com"><b>www.sitioweb.com</b></a></li>
+                                        <li><a href="http://ar.linkedin.com/in/nramirez36/"><b>www.nramirez36.com</b></a></li>
                                     </ul>
                                 </section>
                                 <section class="6u">
                                     <h3>Sedes</h3>
                                     <ul class="links">
                                         <li><u>Dirección</u></li>
-                                        <li><b>Sesarego esq. Anchorena</b></li>
-                                        <li><b>B° Jorge Newberry</b></li>
+                                        <li><b>Belice 6060</b></li>
+                                        <li><b>B° Parque Futura</b></li>
                                         <li><u>Mapa:</u></li>
                                         <li><a href="Mapa.aspx" class="popupMapa">
                                             <img alt="" src="images/Google-Maps-icon.png" style="width: 40px; height: 40px" />
@@ -167,7 +168,8 @@
                                     <div class="12u">
                                         <ul class="actions">
                                             <li>
-                                                <input type="submit" class="button alt" value="Enviar Mensaje" /></li>
+                                                <asp:Button ID="btnEnviarMensaje" runat="server" CssClass="button alt" Text="Enviar Mensaje" />
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -178,17 +180,17 @@
 
                 <!-- Icons -->
                 <ul class="icons">
-                    <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-                    <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                    <li><a href="http://twitter.com/nramirez36" class="icon fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
+                    <li><a href="http://www.facebook.com/nramirez36" class="icon fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
                     <%--<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>--%>
-                    <li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                    <li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+                    <li><a href="http://ar.linkedin.com/in/nramirez36/" class="icon fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+                    <%--<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>--%>
                 </ul>
 
                 <!-- Copyright -->
                 <div class="copyright">
                     <ul class="menu">
-                        <li>&copy; TODO SALUD. Todos los derechos reservados.</li>
+                        <li>&copy; nramirez36. Todos los derechos reservados.</li>
                         <li>Diseño y Desarrollo: <a href="http://www.facebook.com/nramirez36">nramirez36</a></li>
                     </ul>
                 </div>
