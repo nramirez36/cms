@@ -13,7 +13,7 @@
                 <li><a href="QuienesSomos.aspx">Quienes Somos</a></li>
                 <li><a href="Historia.aspx">Nuesta Historia</a></li>
                 <li class="current"><a href="Vision.aspx">Visión, Misión y Valores</a></li>
-                <%--<%--<li><a href="Ubicacion.aspx">Ubicación</a></li>--%>--%>
+                <%--<li><a href="Ubicacion.aspx">Ubicación</a></li>--%>
             </ul>
         </li>
         <%--<li><a href="Novedades.aspx">Novedades</a></li>--%>
