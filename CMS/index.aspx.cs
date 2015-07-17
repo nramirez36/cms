@@ -6,6 +6,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Text;
 using System.IO;
+using CMS.Entities;
+using CMS.BL;
 namespace CMS
 {
     public partial class index : System.Web.UI.Page

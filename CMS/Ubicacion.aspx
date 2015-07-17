@@ -32,7 +32,7 @@
     <ul>
         <li><a href="index.aspx">Inicio</a></li>
         <li class="current">
-            <a href="Nosotros.aspx">Nosotros</a>
+            <a href="#">Nosotros</a>
             <ul>
                 <li><a href="QuienesSomos.aspx">Quienes Somos</a></li>
                 <li><a href="Historia.aspx">Nuesta Historia</a></li>

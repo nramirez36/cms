@@ -8,7 +8,7 @@
     <ul>
         <li><a href="index.aspx">Inicio</a></li>
         <li class="current">
-            <a href="Nosotros.aspx">Nosotros</a>
+            <a href="#">Nosotros</a>
             <ul>
                 <li class="current"><a href="QuienesSomos.aspx">Quienes Somos</a></li>
                 <li><a href="Historia.aspx">Nuesta Historia</a></li>
@@ -16,7 +16,7 @@
                 <li class="current"><a href="Ubicacion.aspx">Ubicación</a></li>
             </ul>
         </li>
-        <li><a href="Novedades.aspx">Novedades</a></li>
+        <%--<li><a href="Novedades.aspx">Novedades</a></li>--%>
         <li><a href="Contacto.aspx">Contacto</a></li>
     </ul>
 </asp:Content>
@@ -31,21 +31,19 @@
 
         <article>
             <header>
-                <h2>No Sidebar</h2>
-                <p>All content, all the time.</p>
+                <h2>Nosotros</h2>
+                <p>Conocenos un poco más.</p>
             </header>
 
-            <span class="image featured">
-                <img src="images/banner.jpg" alt="" /></span>
+            <%--<span class="image featured">
+                <img src="images/banner.jpg" alt="" /></span>--%>
 
             <p>
-                Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus. 
-								Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat. 
-								Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi 
-								consequat etiam lorem ipsum dolor sit amet nullam.
+                Somos una empresa que busca brindar soluciones informáticas a las compañías con el fin de que mejor su rendimiento y de que se puedan convertir
+                en más competitivas.
             </p>
 
-            <h3>And Yet Another Subheading</h3>
+            <%--<h3>And Yet Another Subheading</h3>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac quam risus, at tempus 
 								justo. Sed dictum rutrum massa eu volutpat. Quisque vitae hendrerit sem. Pellentesque lorem felis, 
@@ -64,7 +62,7 @@
 								fringilla vel malesuada ac, dignissim eu mi. Praesent mollis massa ac nulla pretium pretium. 
 								Maecenas tortor mauris, consectetur pellentesque dapibus eget, tincidunt vitae arcu. 
 								Vestibulum purus augue, tincidunt sit amet iaculis id, porta eu purus.
-            </p>
+            </p>--%>
         </article>
 
     </div>

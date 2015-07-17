@@ -1,4 +1,4 @@
-﻿<%@ Page Title="nramirez36 - Administrador de Novedades" Language="C#" MasterPageFile="~/Sistema.Master" AutoEventWireup="true" CodeBehind="NovedadesABM.aspx.cs" Inherits="CMS.NovedadesABM" %>
+﻿<%@ Page Title="nramirez36 - Administrador de Novedades" Language="C#" MasterPageFile="~/Sistema.Master" AutoEventWireup="true" CodeBehind="NovedadesABM.aspx.cs" Inherits="CMS.NovedadesABM" EnableEventValidation="false" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cpHead" runat="server">
     <script runat="server">

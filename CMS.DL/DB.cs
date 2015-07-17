@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using System.Data.SqlClient;
+using System.Configuration;
 namespace CMS.DL
 {
     public static class DB
     {
-        private static string strConexion = "Data Source=(local)\\sqlexpress;Initial Catalog=nramirez36-CMS;Integrated Security=True";
+        private static string strConexion = ConfigurationManager.ConnectionStrings["cms"].ToString();
 
         public static SqlConnection Conectar()
         {

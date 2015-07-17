@@ -9,15 +9,15 @@
     <ul>
         <li class="current"><a href="index.aspx">Inicio</a></li>
         <li>
-            <a href="Nosotros.aspx">Nosotros</a>
+            <a href="#">Nosotros</a>
             <ul>
                 <li><a href="QuienesSomos.aspx">Quienes Somos</a></li>
                 <li><a href="Historia.aspx">Nuesta Historia</a></li>
                 <li><a href="Vision.aspx">Visión, Misión y Valores</a></li>
-                <li><a href="Ubicacion.aspx">Ubicación</a></li>
+                <%--<li><a href="Ubicacion.aspx">Ubicación</a></li>--%>
             </ul>
         </li>
-        <li><a href="Novedades.aspx">Novedades</a></li>
+        <%-- <li><a href="Novedades.aspx">Novedades</a></li>--%>
         <li><a href="Contacto.aspx">Contacto</a></li>
     </ul>
 </asp:Content>
@@ -25,11 +25,11 @@
     <section id="banner">
         <header>
             <h2>nramirez36 - <em>Sistemas Informaticos</em></h2>
-            <a href="#" class="button">Learn More</a>
+            <a href="QuienesSomos.aspx" class="button">Conózcanos</a>
 
         </header>
     </section>
-    >
+
 </asp:Content>
 <asp:Content ID="Content6" ContentPlaceHolderID="cpHighlights" runat="server">
     <section class="wrapper style1">
@@ -39,21 +39,21 @@
                     <div class="box highlight">
                         <i class="icon major fa-paper-plane"></i>
                         <h3>Quienes Somos</h3>
-                        <p>Estas serian puntos importantes para remarcar (se puede ver de hacer dinamico).</p>
+                        <p><b>nramirez36</b> es una organización especializada en brindar servicios informáticos. Estamos especializados en el desarrollo de soluciones adecuadas para las necesidades de cada cliente.</p>
                     </div>
                 </section>
                 <section class="4u">
                     <div class="box highlight">
                         <i class="icon major fa-pencil"></i>
                         <h3>Especialidades</h3>
-                        <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+                        <p>Somos especialista en el desarrollo de productos utilizando las tecnologías de Microsoft.</p>
                     </div>
                 </section>
                 <section class="4u">
                     <div class="box highlight">
                         <i class="icon major fa-wrench"></i>
-                        <h3>Planes</h3>
-                        <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+                        <h3>Servicios</h3>
+                        <p>Le brindamos a nuestros clientes el mejor servicio para que pueda tener la mejor experiencia tanto con el producto como con su uso y el soporte del mismo.</p>
                     </div>
                 </section>
             </div>
@@ -69,8 +69,8 @@
                         <a href="#" class="image left">
                             <img src="images/pic01.jpg" alt="" /></a>
                         <div class="inner">
-                            <h3>Novedades sobre salud</h3>
-                            <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+                            <h3>Capacitaciones</h3>
+                            <p>Brindamos cursos de capacitación y actualización tecnológica para que puedas ser mas eficiente y eficaz.</p>
                         </div>
                     </div>
                 </section>
@@ -79,8 +79,8 @@
                         <a href="#" class="image left">
                             <img src="images/pic02.jpg" alt="" /></a>
                         <div class="inner">
-                            <h3>Calendario Vacunas</h3>
-                            <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+                            <h3>Desarrollo a Medida</h3>
+                            <p>Realizamos desarrollo de sistemas y sitios web que se ajustan a tus necesidades.</p>
                         </div>
                     </div>
                 </section>
@@ -91,8 +91,8 @@
                         <a href="#" class="image left">
                             <img src="images/pic03.jpg" alt="" /></a>
                         <div class="inner">
-                            <h3>The Third Thing</h3>
-                            <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+                            <h3>Desarrollo Mobile</h3>
+                            <p>Realizamos tus aplicaciones para que tambien puedas contar con tu negocio en los telefonos o puedas brindar mas servicios a tus clientes.</p>
                         </div>
                     </div>
                 </section>
@@ -101,12 +101,13 @@
                         <a href="#" class="image left">
                             <img src="images/pic04.jpg" alt="" /></a>
                         <div class="inner">
-                            <h3>The Fourth Thing</h3>
-                            <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+                            <h3>Charlas</h3>
+                            <p>Se dictan charlas en distintas instituciones para promover el uso adecuado de las tecnológias.</p>
                         </div>
                     </div>
                 </section>
             </div>
+        </div>
     </section>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cpContenido" runat="server">

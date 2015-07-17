@@ -9,15 +9,15 @@
     <ul>
         <li><a href="index.aspx">Inicio</a></li>
         <li class="current">
-            <a href="Nosotros.aspx">Nosotros</a>
+            <a href="#">Nosotros</a>
             <ul>
                 <li><a href="QuienesSomos.aspx">Quienes Somos</a></li>
                 <li><a href="Historia.aspx">Nuesta Historia</a></li>
                 <li><a href="Vision.aspx">Visión, Misión y Valores</a></li>
-                <li><a href="Ubicacion.aspx">Ubicación</a></li>
+                <%--<li><a href="Ubicacion.aspx">Ubicación</a></li>--%>
             </ul>
         </li>
-        <li><a href="Novedades.aspx">Novedades</a></li>
+<%--        <li><a href="Novedades.aspx">Novedades</a></li>--%>
         <li><a href="Contacto.aspx">Contacto</a></li>
     </ul>
 </asp:Content>

@@ -49,14 +49,14 @@
                 <div class="row">
                     <div class="4u">
                         <span class="me image image-full">
-                            LOGO</span>
+                            </span>
                     </div>
                     <div class="4u">
                         <asp:ContentPlaceHolder ID="cpTituloPagina" runat="server"></asp:ContentPlaceHolder>
                     </div>
                     <div class="4u">
                         <%--<asp:Button ID="btnAcceder" CssClass="button special" runat="server" Text="Acceder al Sistema" OnClick="btnAcceder_Click" />--%>
-                        boton?
+                        <%--boton?--%>
                     </div>
                 </div>
 
@@ -94,10 +94,10 @@
                                         <li><u>Skype:</u></li>
                                         <li><b>nramirez363</b></li>
                                         <li><u>Pagina Web:</u></li>
-                                        <li><a href="http://ar.linkedin.com/in/nramirez36/"><b>www.nramirez36.com</b></a></li>
+                                        <li><a href="http://nramirez36.azurewebsites.net/"><b>nramirez36.com</b></a></li>
                                     </ul>
                                 </section>
-                                <section class="6u">
+                                <%--<section class="6u">
                                     <h3>Sedes</h3>
                                     <ul class="links">
                                         <li><u>Dirección</u></li>
@@ -109,7 +109,7 @@
                                         </a>
                                         </li>
                                     </ul>
-                                </section>
+                                </section>--%>
                             </div>
                         </div>
                         <section class="6u">
