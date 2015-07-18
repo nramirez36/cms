@@ -107,6 +107,30 @@
                     </div>
                 </section>
             </div>
+            <asp:ListView ID="lvItems" runat="server" ItemPlaceholderID="itemPlaceholder1" GroupItemCount="2" GroupPlaceholderID="groupPlaceholder1"
+                DataKeyNames="nov_identificador" InsertItemPosition="LastItem">
+                <LayoutTemplate>
+                    <div class="row" runat="server">
+                        <div id="groupPlaceholder1" runat="server" />
+                    </div>
+                </LayoutTemplate>
+                <ItemTemplate>
+                    <section class="6u">
+                        <div class="box post">
+                            <a href="#" class="image left">
+                                <img src="images/pic04.jpg" alt="" /></a>
+                            <div class="inner">
+                                <h3><%# Eval("Titulo") %></h3>
+                                <p><%# Eval("descripcion_breve") %></p>
+                            </div>
+                        </div>
+                    </section>
+                </ItemTemplate>
+                <InsertItemTemplate />
+                <GroupTemplate>
+                    <div class="box post" id="itemPlaceholder1" runat="server" />
+                </GroupTemplate>
+            </asp:ListView>s
         </div>
     </section>
 </asp:Content>

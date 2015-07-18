@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetNovedadesAll">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetNovedadesAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNovedadesAllResult" type="tns:ArrayOfNovedad" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfNovedad">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Novedad" nillable="true" type="tns:Novedad" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Novedad">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="nov_identificador" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="mensaje" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="fechaAlta" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="fechaBaja" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="fechaModificacion" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="archivo" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="mensaje_web" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="titulo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="idUsuAlta" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="idUsuBaja" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="idUsuMod" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="tipo" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="archivo_ext" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="archivo_nombre" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="archivo_tam_kb" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="descripcion_breve" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="es_imagen" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="es_historica" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Load">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadResult" type="tns:Novedad" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadArchivo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadArchivoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadArchivoResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConvertBlobToByte">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sql" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConvertBlobToByteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConvertBlobToByteResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Save">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nov" type="tns:Novedad" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveResult" type="tns:Novedad" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NovedadLoadAllByDescripcion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="descripcion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NovedadLoadAllByDescripcionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NovedadLoadAllByDescripcionResult" type="tns:ArrayOfNovedad" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NovedadDeleteLogico">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nov" type="tns:Novedad" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NovedadDeleteLogicoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NovedadDeleteLogicoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nov" type="tns:Novedad" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetNovedadesAllSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNovedadesAll" />
+  </wsdl:message>
+  <wsdl:message name="GetNovedadesAllSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNovedadesAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadSoapIn">
+    <wsdl:part name="parameters" element="tns:Load" />
+  </wsdl:message>
+  <wsdl:message name="LoadSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadArchivoSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadArchivo" />
+  </wsdl:message>
+  <wsdl:message name="LoadArchivoSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadArchivoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConvertBlobToByteSoapIn">
+    <wsdl:part name="parameters" element="tns:ConvertBlobToByte" />
+  </wsdl:message>
+  <wsdl:message name="ConvertBlobToByteSoapOut">
+    <wsdl:part name="parameters" element="tns:ConvertBlobToByteResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveSoapIn">
+    <wsdl:part name="parameters" element="tns:Save" />
+  </wsdl:message>
+  <wsdl:message name="SaveSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="NovedadLoadAllByDescripcionSoapIn">
+    <wsdl:part name="parameters" element="tns:NovedadLoadAllByDescripcion" />
+  </wsdl:message>
+  <wsdl:message name="NovedadLoadAllByDescripcionSoapOut">
+    <wsdl:part name="parameters" element="tns:NovedadLoadAllByDescripcionResponse" />
+  </wsdl:message>
+  <wsdl:message name="NovedadDeleteLogicoSoapIn">
+    <wsdl:part name="parameters" element="tns:NovedadDeleteLogico" />
+  </wsdl:message>
+  <wsdl:message name="NovedadDeleteLogicoSoapOut">
+    <wsdl:part name="parameters" element="tns:NovedadDeleteLogicoResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:Update" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WSCMSSoap">
+    <wsdl:operation name="GetNovedadesAll">
+      <wsdl:input message="tns:GetNovedadesAllSoapIn" />
+      <wsdl:output message="tns:GetNovedadesAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Load">
+      <wsdl:input message="tns:LoadSoapIn" />
+      <wsdl:output message="tns:LoadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadArchivo">
+      <wsdl:input message="tns:LoadArchivoSoapIn" />
+      <wsdl:output message="tns:LoadArchivoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertBlobToByte">
+      <wsdl:input message="tns:ConvertBlobToByteSoapIn" />
+      <wsdl:output message="tns:ConvertBlobToByteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Save">
+      <wsdl:input message="tns:SaveSoapIn" />
+      <wsdl:output message="tns:SaveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NovedadLoadAllByDescripcion">
+      <wsdl:input message="tns:NovedadLoadAllByDescripcionSoapIn" />
+      <wsdl:output message="tns:NovedadLoadAllByDescripcionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NovedadDeleteLogico">
+      <wsdl:input message="tns:NovedadDeleteLogicoSoapIn" />
+      <wsdl:output message="tns:NovedadDeleteLogicoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <wsdl:input message="tns:UpdateSoapIn" />
+      <wsdl:output message="tns:UpdateSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSCMSSoap" type="tns:WSCMSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetNovedadesAll">
+      <soap:operation soapAction="http://tempuri.org/GetNovedadesAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Load">
+      <soap:operation soapAction="http://tempuri.org/Load" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadArchivo">
+      <soap:operation soapAction="http://tempuri.org/LoadArchivo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertBlobToByte">
+      <soap:operation soapAction="http://tempuri.org/ConvertBlobToByte" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Save">
+      <soap:operation soapAction="http://tempuri.org/Save" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NovedadLoadAllByDescripcion">
+      <soap:operation soapAction="http://tempuri.org/NovedadLoadAllByDescripcion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NovedadDeleteLogico">
+      <soap:operation soapAction="http://tempuri.org/NovedadDeleteLogico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <soap:operation soapAction="http://tempuri.org/Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSCMSSoap12" type="tns:WSCMSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetNovedadesAll">
+      <soap12:operation soapAction="http://tempuri.org/GetNovedadesAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Load">
+      <soap12:operation soapAction="http://tempuri.org/Load" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadArchivo">
+      <soap12:operation soapAction="http://tempuri.org/LoadArchivo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertBlobToByte">
+      <soap12:operation soapAction="http://tempuri.org/ConvertBlobToByte" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Save">
+      <soap12:operation soapAction="http://tempuri.org/Save" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NovedadLoadAllByDescripcion">
+      <soap12:operation soapAction="http://tempuri.org/NovedadLoadAllByDescripcion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NovedadDeleteLogico">
+      <soap12:operation soapAction="http://tempuri.org/NovedadDeleteLogico" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <soap12:operation soapAction="http://tempuri.org/Update" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSCMS">
+    <wsdl:port name="WSCMSSoap" binding="tns:WSCMSSoap">
+      <soap:address location="http://localhost:28368/WSCMS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WSCMSSoap12" binding="tns:WSCMSSoap12">
+      <soap12:address location="http://localhost:28368/WSCMS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

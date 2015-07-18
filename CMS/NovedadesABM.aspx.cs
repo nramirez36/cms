@@ -4,8 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using CMS.Entities;
-using CMS.BL;
+//using CMS.Entities;
+using CMS.WSCMS;
 namespace CMS
 {
     public partial class NovedadesABM : System.Web.UI.Page
@@ -75,7 +75,7 @@ namespace CMS
                 int idSeleccionado = Convert.ToInt32(gvListadoNovedades.SelectedDataKey[0]);
                 if (idSeleccionado != 0)
                 {
-                    novedadSeleccionada = GestorNovedades.Load(idSeleccionado);
+                    novedadSeleccionada =  ObtenerWS().Load(idSeleccionado);
                     limpiarPanelNovedad();
                     mostrarNovedad(novedadSeleccionada);
                 }
@@ -121,7 +121,7 @@ namespace CMS
                 {
                     novedadSeleccionada = new Novedad();
                     novedadSeleccionada.nov_identificador = idSeleccionado;
-                    if (GestorNovedades.NovedadDeleteLogico(novedadSeleccionada) > 0)
+                    if (ObtenerWS().NovedadDeleteLogico(novedadSeleccionada) > 0)
                     {
                         lblMensajeAdvertencia.Text = "Novedad dada de baja con éxito";
                     }
@@ -154,7 +154,7 @@ namespace CMS
                 novedadSeleccionada = obtenerNovedad();
                 if (operacionSeleccionada == (int)OPERACION.ALTA)
                 {
-                    if (GestorNovedades.Save(novedadSeleccionada) != null)
+                    if (ObtenerWS().Save(novedadSeleccionada) != null)
                     {
                         lblMensajeAdvertencia.Text = "Se dio de Alta correctamente la Novedad";
                         habilitarPanelNovedad(false);
@@ -174,7 +174,7 @@ namespace CMS
                     {
                         novedadSeleccionada.nov_identificador = idSeleccionado;
                         
-                        if (GestorNovedades.Update(novedadSeleccionada) > 0)
+                        if (ObtenerWS().Update(novedadSeleccionada) > 0)
                         {
                             lblMensajeAdvertencia.Text = "Se modificó correctamente la Novedad";
                             habilitarPanelNovedad(false);
@@ -214,7 +214,7 @@ namespace CMS
             novedadesMostrar = new List<Novedad>();
             gvListadoNovedades.SelectedIndex = -1;
             limpiarPanelNovedad();
-            novedadesMostrar = GestorNovedades.NovedadLoadAllByDescripcion(txtDescripcionFiltro.Text.Trim());
+            novedadesMostrar = ObtenerWS().NovedadLoadAllByDescripcion(txtDescripcionFiltro.Text.Trim()).ToList();
             if (novedadesMostrar != null && novedadesMostrar.Count > 0)
             {
                 gvListadoNovedades.DataSource = null;
@@ -302,7 +302,7 @@ namespace CMS
 
         private void cargarGrillaAll()
         {
-            novedadesMostrar = GestorNovedades.LoadAll();
+            novedadesMostrar = ObtenerWS().GetNovedadesAll().ToList();
             gvListadoNovedades.DataSource = null;
             gvListadoNovedades.DataSource = novedadesMostrar;
             string[] claves = { "nov_identificador" };
@@ -354,6 +354,12 @@ namespace CMS
 
             return rta;
         }
+        private WSCMS.WSCMS ObtenerWS()
+        {
+            return new WSCMS.WSCMS();
+        
+        }
+
         #endregion
     }
 }
