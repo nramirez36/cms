@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
-  <contractRef ref="http://localhost:28368/WSCMS.asmx?wsdl" docRef="http://localhost:28368/WSCMS.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
-  <soap address="http://localhost:28368/WSCMS.asmx" xmlns:q1="http://tempuri.org/" binding="q1:WSCMSSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
-  <soap address="http://localhost:28368/WSCMS.asmx" xmlns:q2="http://tempuri.org/" binding="q2:WSCMSSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <contractRef ref="http://nramirez36ws.azurewebsites.net/wscms.asmx?wsdl" docRef="http://nramirez36ws.azurewebsites.net/wscms.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://nramirez36ws.azurewebsites.net/wscms.asmx" xmlns:q1="http://tempuri.org/" binding="q1:WSCMSSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://nramirez36ws.azurewebsites.net/wscms.asmx" xmlns:q2="http://tempuri.org/" binding="q2:WSCMSSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
 </discovery>

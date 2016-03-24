@@ -45,6 +45,11 @@
     <Reference Include="Microsoft.Practices.Unity.Interception">
       <HintPath>..\..\nramirez36 - Mis Librerias\Microsoft.Practices.Unity.Interception.dll</HintPath>
     </Reference>
+    <Reference Include="MySql.Data, Version=6.9.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.9.6\Assemblies\v4.0\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
@@ -55,7 +60,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DB.cs" />
+    <Compile Include="DBMySql.cs" />
     <Compile Include="Novedades.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -373,10 +373,10 @@
   </wsdl:binding>
   <wsdl:service name="WSCMS">
     <wsdl:port name="WSCMSSoap" binding="tns:WSCMSSoap">
-      <soap:address location="http://localhost:28368/WSCMS.asmx" />
+      <soap:address location="http://nramirez36ws.azurewebsites.net/wscms.asmx" />
     </wsdl:port>
     <wsdl:port name="WSCMSSoap12" binding="tns:WSCMSSoap12">
-      <soap12:address location="http://localhost:28368/WSCMS.asmx" />
+      <soap12:address location="http://nramirez36ws.azurewebsites.net/wscms.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

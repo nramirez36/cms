@@ -9,6 +9,7 @@ using Microsoft.Practices.EnterpriseLibrary.Data.Sql;
 using Microsoft.Practices.EnterpriseLibrary.Common;
 using System.Data.SqlClient;
 using System.Data.Common;
+using MySql.Data.MySqlClient;
 //using Microsoft.Practices.EnterpriseLibrary.Data.Configuration;
 namespace CMS.DL
 {
@@ -17,12 +18,13 @@ namespace CMS.DL
         public static Novedad Load(int id)
         {
             Novedad novedad = new Novedad();
-            SqlConnection conexion = DB.Conectar();
+            //SqlConnection conexion = DB.Conectar();
+            MySqlConnection conexion = DBMySql.Conectar();
             try
             {
                 string sql = "SELECT nov_identificador, mensaje, fechaAlta, fechaBaja, fechaModificacion, archivo, mensaje_web, titulo, idUsuAlta, idUsuMod, idUsuBaja, tipo, archivo_ext, archivo_nombre, archivo_tam_kb, descripcion_breve, es_imagen, es_historica FROM novedad WHERE (nov_identificador = " + id + ")";
-                SqlCommand sqlcmd = new SqlCommand(sql, conexion);
-                SqlDataReader dr = sqlcmd.ExecuteReader();
+                MySqlCommand sqlcmd = new MySqlCommand(sql, conexion);
+                MySqlDataReader dr = sqlcmd.ExecuteReader();
                 if (dr.HasRows)
                 {
                     if (dr.Read())
@@ -39,15 +41,15 @@ namespace CMS.DL
         }
         public static List<Novedad> LoadAll()
         {
-            SqlConnection conexion = DB.Conectar();
+            MySqlConnection conexion = DBMySql.Conectar();
             Novedad novedad = null;
             List<Novedad> lstNovedades = new List<Novedad>();
             try
             {
                 string sql = "SELECT nov_identificador, mensaje, fechaAlta, fechaBaja, fechaModificacion, archivo, mensaje_web, titulo, idUsuAlta, idUsuMod, idUsuBaja, tipo, archivo_ext, archivo_nombre, archivo_tam_kb, descripcion_breve, es_imagen, es_historica FROM novedad WHERE (fechaBaja IS NULL)";
                 sql += " order by fechaAlta";
-                SqlCommand sqlcmd = new SqlCommand(sql, conexion);
-                SqlDataReader dr = sqlcmd.ExecuteReader();
+                MySqlCommand sqlcmd = new MySqlCommand(sql, conexion);
+                MySqlDataReader dr = sqlcmd.ExecuteReader();
                 if (dr.HasRows)
                 {
                     while (dr.Read())
@@ -68,16 +70,16 @@ namespace CMS.DL
         public static List<Novedad> NovedadLoadAllByDescripcion(string descripcion)
         {
             Novedad novedad = null;
-            SqlConnection conexion = DB.Conectar();
+            MySqlConnection conexion = DBMySql.Conectar();
             List<Novedad> lstNovedades = new List<Novedad>();
             try
             {
                 string sql = "SELECT nov_identificador, mensaje, fechaAlta, fechaBaja, fechaModificacion, archivo, mensaje_web, titulo, idUsuAlta, idUsuMod, idUsuBaja, tipo, archivo_ext, archivo_nombre, archivo_tam_kb, descripcion_breve, es_imagen, es_historica FROM novedad WHERE (fechaBaja IS NULL) AND (UPPER(mensaje_web) like '%" + descripcion + "%') AND (UPPER(titulo) like '%" + descripcion + "%') ";
                 sql += " order by fechaAlta";
-                SqlCommand sqlcmd = new SqlCommand(sql, conexion);
-                List<SqlParameter> listp = new List<SqlParameter>();
+                MySqlCommand sqlcmd = new MySqlCommand(sql, conexion);
+                List<MySqlParameter> listp = new List<MySqlParameter>();
                 //SqlDataReader dr = sqlcmd.ExecuteReader();
-                SqlDataReader dr = DB.GenerarReader(sql, listp, conexion);
+                MySqlDataReader dr = DBMySql.GenerarReader(sql, listp, conexion);
                 if (dr.HasRows)
                 {
                     while (dr.Read())
@@ -156,7 +158,7 @@ namespace CMS.DL
                 throw;
             }
         }
-        private static Novedad FillNovedadDataReader(SqlDataReader row, bool traerArchivo)
+        private static Novedad FillNovedadDataReader(MySqlDataReader row, bool traerArchivo)
         {
             try
             {
@@ -209,11 +211,11 @@ namespace CMS.DL
         }
         public static byte[] ConvertBlobToByte(string sSql)
         {
-            SqlDataReader oraImgReader;
-            SqlCommand oraImgCmd;
-            SqlConnection oConn = DB.Conectar();
+            MySqlDataReader oraImgReader;
+            MySqlCommand oraImgCmd;
+            MySqlConnection oConn = DBMySql.Conectar();
             oConn.Open();
-            oraImgCmd = new SqlCommand(sSql, oConn);
+            oraImgCmd = new MySqlCommand(sSql, oConn);
             oraImgCmd.Connection = oConn;
             oraImgCmd.CommandType = CommandType.Text;
             oraImgReader = oraImgCmd.ExecuteReader();
@@ -233,8 +235,8 @@ namespace CMS.DL
         }
         public static Novedad Save(Novedad novedad)
         {
-            SqlConnection con = DB.Conectar();
-            SqlTransaction transaction = null;
+            MySqlConnection con = DBMySql.Conectar();
+            MySqlTransaction transaction = null;
             try
             {
                 transaction = con.BeginTransaction();
@@ -246,7 +248,7 @@ namespace CMS.DL
                 {
                     sSql = @"INSERT INTO novedad (mensaje, fechaAlta, mensaje_web, titulo, idUsuAlta, descripcion_breve, es_imagen, es_historica ";
 
-                    List<SqlParameter> listp = new List<SqlParameter>();
+                    List<MySqlParameter> listp = new List<MySqlParameter>();
 
                     if (novedad.archivo != null && novedad.archivo.Length > 0)
                     {
@@ -259,32 +261,32 @@ namespace CMS.DL
                     {
                         sSql += @",@Archivo , @ArchivoExt, @ArchivoNombre," + novedad.archivo_tam_kb;
 
-                        listp.Add(new SqlParameter("@Archivo", novedad.archivo));
-                        listp.Add(new SqlParameter("@ArchivoExt", novedad.archivo_ext));
-                        listp.Add(new SqlParameter("@ArchivoNombre", novedad.archivo_nombre));
+                        listp.Add(new MySqlParameter("@Archivo", novedad.archivo));
+                        listp.Add(new MySqlParameter("@ArchivoExt", novedad.archivo_ext));
+                        listp.Add(new MySqlParameter("@ArchivoNombre", novedad.archivo_nombre));
                     }
 
                     sSql += ")";
 
-                    listp.Add(new SqlParameter("@mensaje", novedad.mensaje));
-                    listp.Add(new SqlParameter("@mensaje_web", novedad.mensaje_web));
-                    listp.Add(new SqlParameter("@titulo", novedad.titulo));
-                    listp.Add(new SqlParameter("@idUsAlta", novedad.idUsuAlta));
-                    listp.Add(new SqlParameter("@descripcion_breve", novedad.descripcion_breve));                    
+                    listp.Add(new MySqlParameter("@mensaje", novedad.mensaje));
+                    listp.Add(new MySqlParameter("@mensaje_web", novedad.mensaje_web));
+                    listp.Add(new MySqlParameter("@titulo", novedad.titulo));
+                    listp.Add(new MySqlParameter("@idUsAlta", novedad.idUsuAlta));
+                    listp.Add(new MySqlParameter("@descripcion_breve", novedad.descripcion_breve));                    
                     if (novedad.es_historica)
-                        listp.Add(new SqlParameter("@es_historica", 'S'));
+                        listp.Add(new MySqlParameter("@es_historica", 'S'));
                     else
-                        listp.Add(new SqlParameter("@es_historica", 'N'));
+                        listp.Add(new MySqlParameter("@es_historica", 'N'));
                     if (novedad.es_imagen)
-                        listp.Add(new SqlParameter("@es_imagen", 'S'));
+                        listp.Add(new MySqlParameter("@es_imagen", 'S'));
                     else
-                        listp.Add(new SqlParameter("@es_imagen", 'N'));
+                        listp.Add(new MySqlParameter("@es_imagen", 'N'));
 
-                    SqlCommand cmd = new SqlCommand();
+                    MySqlCommand cmd = new MySqlCommand();
                     cmd.Connection = con;
                     cmd.CommandText = sSql;
                     cmd.Transaction = transaction;
-                    result = DB.EjecutarCommand(sSql, listp, con, transaction);
+                    result = DBMySql.EjecutarCommand(sSql, listp, con, transaction);
                     if (result > 0)
                     {
                         transaction.Commit();
@@ -317,8 +319,8 @@ namespace CMS.DL
 
         public static int Delete(Novedad novedad)
         {
-            SqlConnection con = DB.Conectar();
-            SqlTransaction transaction = null;
+            MySqlConnection con = DBMySql.Conectar();
+            MySqlTransaction transaction = null;
             try
             {
                 transaction = con.BeginTransaction();
@@ -327,13 +329,13 @@ namespace CMS.DL
                 if (transaction != null)
                 {
                     sSql = @"UPDATE novedad SET fechaModificacion = @fecUltMod, fechaBaja = @fecBaja, idUsuMod = @idUsMod, idUsuBaja = @idUsBaja WHERE (nov_identificador = @id)";
-                    List<SqlParameter> listp = new List<SqlParameter>();
-                    listp.Add(new SqlParameter("@fecUltMod", novedad.fechaModificacion));
-                    listp.Add(new SqlParameter("@fecBaja", novedad.fechaBaja));
-                    listp.Add(new SqlParameter("@idUsMod", novedad.idUsuMod));
-                    listp.Add(new SqlParameter("@idUsBaja", novedad.idUsuBaja));
-                    listp.Add(new SqlParameter("@id", novedad.nov_identificador));
-                    result = DB.EjecutarCommand(sSql, listp, con, transaction);
+                    List<MySqlParameter> listp = new List<MySqlParameter>();
+                    listp.Add(new MySqlParameter("@fecUltMod", novedad.fechaModificacion));
+                    listp.Add(new MySqlParameter("@fecBaja", novedad.fechaBaja));
+                    listp.Add(new MySqlParameter("@idUsMod", novedad.idUsuMod));
+                    listp.Add(new MySqlParameter("@idUsBaja", novedad.idUsuBaja));
+                    listp.Add(new MySqlParameter("@id", novedad.nov_identificador));
+                    result = DBMySql.EjecutarCommand(sSql, listp, con, transaction);
                     if (result > 0)
                     {
                         transaction.Commit();
@@ -362,8 +364,8 @@ namespace CMS.DL
         public static int Update(Novedad novedad)
         {
             int ret = 0;
-            SqlConnection con = DB.Conectar();
-            SqlTransaction transaction = null;
+            MySqlConnection con = DBMySql.Conectar();
+            MySqlTransaction transaction = null;
             try
             {
                 transaction = con.BeginTransaction();
@@ -374,34 +376,34 @@ namespace CMS.DL
                 {
                     sSql = @"UPDATE novedad SET mensaje = @mensaje, fechaModificacion = @fecMod, mensaje_web = @mensaje_web, titulo = @titulo, idUsuMod = @idUsMod, descripcion_breve = @descr_breve, es_imagen = @imagen, es_historica = @historica";
 
-                    List<SqlParameter> listp = new List<SqlParameter>();
+                    List<MySqlParameter> listp = new List<MySqlParameter>();
                     if (novedad.archivo != null && novedad.archivo.Length > 0)
                     {
                         sSql += @", archivo=@arch, archivo_ext=@arch_ext, archivo_nombre=@arch_nom, archivo_tam_kb=@arch_tam";
-                        listp.Add(new SqlParameter("@arch", novedad.archivo));
-                        listp.Add(new SqlParameter("@arch_ext", novedad.archivo_ext));
-                        listp.Add(new SqlParameter("@arch_nom", novedad.archivo_nombre));
-                        listp.Add(new SqlParameter("@arch_tam", novedad.archivo_tam_kb));
+                        listp.Add(new MySqlParameter("@arch", novedad.archivo));
+                        listp.Add(new MySqlParameter("@arch_ext", novedad.archivo_ext));
+                        listp.Add(new MySqlParameter("@arch_nom", novedad.archivo_nombre));
+                        listp.Add(new MySqlParameter("@arch_tam", novedad.archivo_tam_kb));
                     }
 
                     sSql += @" where  NOV_IDENTIFICADOR=@id";
 
-                    listp.Add(new SqlParameter("@mensaje", novedad.mensaje));
-                    listp.Add(new SqlParameter("@fecMod", DateTime.Now));
-                    listp.Add(new SqlParameter("@mensaje_web", novedad.mensaje_web));
-                    listp.Add(new SqlParameter("@titulo", novedad.titulo));
-                    listp.Add(new SqlParameter("@idUsMod", novedad.idUsuMod));
-                    listp.Add(new SqlParameter("@descr_breve", novedad.descripcion_breve));
+                    listp.Add(new MySqlParameter("@mensaje", novedad.mensaje));
+                    listp.Add(new MySqlParameter("@fecMod", DateTime.Now));
+                    listp.Add(new MySqlParameter("@mensaje_web", novedad.mensaje_web));
+                    listp.Add(new MySqlParameter("@titulo", novedad.titulo));
+                    listp.Add(new MySqlParameter("@idUsMod", novedad.idUsuMod));
+                    listp.Add(new MySqlParameter("@descr_breve", novedad.descripcion_breve));
                     if (novedad.es_historica)
-                        listp.Add(new SqlParameter("@historica", 'S'));
+                        listp.Add(new MySqlParameter("@historica", 'S'));
                     else
-                        listp.Add(new SqlParameter("@historica", 'N'));
+                        listp.Add(new MySqlParameter("@historica", 'N'));
                     if (novedad.es_imagen)
-                        listp.Add(new SqlParameter("@imagen", 'S'));
+                        listp.Add(new MySqlParameter("@imagen", 'S'));
                     else
-                        listp.Add(new SqlParameter("@imagen", 'N'));
-                    listp.Add(new SqlParameter("@id", novedad.nov_identificador));
-                    result = DB.EjecutarCommand(sSql, listp, con, transaction);
+                        listp.Add(new MySqlParameter("@imagen", 'N'));
+                    listp.Add(new MySqlParameter("@id", novedad.nov_identificador));
+                    result = DBMySql.EjecutarCommand(sSql, listp, con, transaction);
 
                     if (result > 0)
                     {

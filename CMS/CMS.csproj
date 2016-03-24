@@ -119,10 +119,10 @@
     <Content Include="Web References\WSCMS\Novedad.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </Content>
-    <Content Include="Web References\WSCMS\Reference.map">
+    <None Include="Web References\WSCMS\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
-    </Content>
+    </None>
     <None Include="Web References\WSCMS\WSCMS.disco" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -260,10 +260,10 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://localhost:28368/WSCMS.asmx">
+    <WebReferenceUrl Include="http://nramirez36ws.azurewebsites.net/wscms.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\WSCMS\</RelPath>
-      <UpdateFromURL>http://localhost:28368/WSCMS.asmx</UpdateFromURL>
+      <UpdateFromURL>http://nramirez36ws.azurewebsites.net/wscms.asmx</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>

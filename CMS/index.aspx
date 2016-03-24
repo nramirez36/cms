@@ -130,7 +130,7 @@
                 <GroupTemplate>
                     <div class="box post" id="itemPlaceholder1" runat="server" />
                 </GroupTemplate>
-            </asp:ListView>s
+            </asp:ListView>
         </div>
     </section>
 </asp:Content>

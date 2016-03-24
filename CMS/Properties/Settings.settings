@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="CMS_WSCMS_WSCMS" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">http://localhost:28368/WSCMS.asmx</Value>
+      <Value Profile="(Default)">http://nramirez36ws.azurewebsites.net/wscms.asmx</Value>
     </Setting>
   </Settings>
 </SettingsFile>
